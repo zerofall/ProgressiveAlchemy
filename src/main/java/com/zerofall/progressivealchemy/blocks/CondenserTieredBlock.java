@@ -30,11 +30,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class CondenserTieredBlock extends Condenser implements IProbeInfoAccessor {
 	
 	private final int emcLimit;
-	private final int tier;
 
 	public CondenserTieredBlock(int tier, int emcLimit) 
 	{
-		this.tier = tier;
 		this.emcLimit = emcLimit;
 		this.setUnlocalizedName("condensertiered_"+tier);
 		this.setRegistryName("condensertiered_"+tier);

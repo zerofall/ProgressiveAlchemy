@@ -2,11 +2,8 @@ package com.zerofall.progressivealchemy;
 
 import com.zerofall.progressivealchemy.blocks.CondenserTieredBlock;
 
-import moze_intel.projecte.api.state.PEStateProps;
-import moze_intel.projecte.gameObjs.ObjHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -28,13 +25,7 @@ public class ModBlocks {
 
 
     @SideOnly(Side.CLIENT)
-    public static void initModels() {
-    	ModelLoader.setCustomStateMapper(
-				ObjHandler.condenser,
-				(new StateMap.Builder()).ignore(PEStateProps.FACING).build()
-		);
-    	
-    	
+    public static void initModels() {    	
     	registerBlock(condenserTieredBlockT1);
     	registerBlock(condenserTieredBlockT2);
     	registerBlock(condenserTieredBlockT3);

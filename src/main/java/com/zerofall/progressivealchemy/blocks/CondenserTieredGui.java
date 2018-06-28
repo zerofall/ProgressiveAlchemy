@@ -13,12 +13,10 @@ public class CondenserTieredGui extends GuiContainer {
 
 	private static final ResourceLocation texture = new ResourceLocation(ProgressiveAlchemy.MODID.toLowerCase(), "textures/gui/condensertiered.png");
 	private final CondenserTieredContainer container;
-	private final int emcLimit;
 	
 	public CondenserTieredGui(InventoryPlayer invPlayer, CondenserTieredTileEntity tile) {
 		super(new CondenserTieredContainer(invPlayer, tile));
 		this.container = (CondenserTieredContainer)this.inventorySlots;
-		this.emcLimit = tile.getEmcLimit();
 		this.xSize = 255;
 		this.ySize = 233;
 	}

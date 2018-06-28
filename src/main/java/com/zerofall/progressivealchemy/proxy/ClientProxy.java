@@ -1,8 +1,11 @@
 package com.zerofall.progressivealchemy.proxy;
 
 import com.zerofall.progressivealchemy.ModBlocks;
+import com.zerofall.progressivealchemy.blocks.CondenserTieredRenderer;
+import com.zerofall.progressivealchemy.blocks.CondenserTieredTileEntity;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -24,6 +27,7 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         ModBlocks.initModels();
+        ClientRegistry.bindTileEntitySpecialRenderer(CondenserTieredTileEntity.class, new CondenserTieredRenderer());
     }
 
 }
