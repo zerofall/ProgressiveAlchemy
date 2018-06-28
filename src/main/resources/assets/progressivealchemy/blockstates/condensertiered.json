@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "progressivealchemy:blocks/condensertiered"
+    },
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "normal": [{ "model": "progressivealchemy:dummy" }],
+    "inventory": [{ "model": "progressivealchemy:base_chest", "textures": { "chest": "progressivealchemy:blocks/condensertiered" }}]
+  }
+}
