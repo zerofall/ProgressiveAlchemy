@@ -22,6 +22,12 @@ public class ModBlocks {
     public static CondenserTieredBlock condenserTieredBlockT4;
     @GameRegistry.ObjectHolder("progressivealchemy:condensertiered_5")
     public static CondenserTieredBlock condenserTieredBlockT5;
+    @GameRegistry.ObjectHolder("progressivealchemy:condensertiered_6")
+    public static CondenserTieredBlock condenserTieredBlockT6;
+    @GameRegistry.ObjectHolder("progressivealchemy:condensertiered_7")
+    public static CondenserTieredBlock condenserTieredBlockT7;
+    @GameRegistry.ObjectHolder("progressivealchemy:condensertiered_8")
+    public static CondenserTieredBlock condenserTieredBlockT8;
 
 
     @SideOnly(Side.CLIENT)
@@ -31,6 +37,9 @@ public class ModBlocks {
     	registerBlock(condenserTieredBlockT3);
     	registerBlock(condenserTieredBlockT4);
     	registerBlock(condenserTieredBlockT5);
+    	registerBlock(condenserTieredBlockT6);
+    	registerBlock(condenserTieredBlockT7);
+    	registerBlock(condenserTieredBlockT8);
     }
     
     private static void registerBlock(Block b)

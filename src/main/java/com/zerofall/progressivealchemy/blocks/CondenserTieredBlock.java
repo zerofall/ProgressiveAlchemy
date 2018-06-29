@@ -11,6 +11,7 @@ import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoAccessor;
 import mcjty.theoneprobe.api.ProbeMode;
 import moze_intel.projecte.gameObjs.blocks.Condenser;
+import moze_intel.projecte.utils.Constants;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -62,13 +63,13 @@ public class CondenserTieredBlock extends Condenser implements IProbeInfoAccesso
 		TileEntity te = world.getTileEntity(data.getPos());
         if (te instanceof CondenserTieredTileEntity) {
         	CondenserTieredTileEntity tile = (CondenserTieredTileEntity) te;
-        	probeInfo.horizontal().text(TextFormatting.DARK_AQUA + IProbeInfo.STARTLOC + "EMC Limit: " + tile.getEmcLimit() + IProbeInfo.ENDLOC);
+        	probeInfo.horizontal().text(TextFormatting.DARK_AQUA + IProbeInfo.STARTLOC + "EMC Limit: " + Constants.EMC_FORMATTER.format(tile.getEmcLimit()) + IProbeInfo.ENDLOC);
         }
 	}
 	
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-        tooltip.add(TextFormatting.DARK_AQUA + "EMC Limit: " + emcLimit);
+        tooltip.add(TextFormatting.DARK_AQUA + "EMC Limit: " + Constants.EMC_FORMATTER.format(emcLimit));
 	}
 	
 	@SideOnly(Side.CLIENT)
