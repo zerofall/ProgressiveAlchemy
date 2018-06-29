@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import com.zerofall.progressivealchemy.ProgressiveAlchemy;
 
 import moze_intel.projecte.api.state.PEStateProps;
-import moze_intel.projecte.gameObjs.ObjHandler;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.GlStateManager;
@@ -28,7 +27,7 @@ public class CondenserTieredRenderer extends TileEntitySpecialRenderer<Condenser
 		if (condenser.getWorld() != null && !condenser.isInvalid())
 		{
 			IBlockState state = condenser.getWorld().getBlockState(condenser.getPos());
-			direction = state.getBlock() == ObjHandler.condenserMk2 ? state.getValue(PEStateProps.FACING) : null;
+			direction = state.getBlock() instanceof CondenserTieredBlock ? state.getValue(PEStateProps.FACING) : null;
 		}
 
 		this.bindTexture(texture);
