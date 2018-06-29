@@ -44,14 +44,14 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        if (Config.tier1Enabled) event.getRegistry().register(new CondenserTieredBlock(1, Config.tier1EmcLimit));
-        if (Config.tier2Enabled) event.getRegistry().register(new CondenserTieredBlock(2, Config.tier2EmcLimit));
-        if (Config.tier3Enabled) event.getRegistry().register(new CondenserTieredBlock(3, Config.tier3EmcLimit));
-        if (Config.tier4Enabled) event.getRegistry().register(new CondenserTieredBlock(4, Config.tier4EmcLimit));
-        if (Config.tier5Enabled) event.getRegistry().register(new CondenserTieredBlock(5, Config.tier5EmcLimit));
-        if (Config.tier6Enabled) event.getRegistry().register(new CondenserTieredBlock(6, Config.tier6EmcLimit));
-        if (Config.tier7Enabled) event.getRegistry().register(new CondenserTieredBlock(7, Config.tier7EmcLimit));
-        if (Config.tier8Enabled) event.getRegistry().register(new CondenserTieredBlock(8, Config.tier8EmcLimit));
+        if (Config.tier1Enabled) event.getRegistry().register(new CondenserTieredBlock(1));
+        if (Config.tier2Enabled) event.getRegistry().register(new CondenserTieredBlock(2));
+        if (Config.tier3Enabled) event.getRegistry().register(new CondenserTieredBlock(3));
+        if (Config.tier4Enabled) event.getRegistry().register(new CondenserTieredBlock(4));
+        if (Config.tier5Enabled) event.getRegistry().register(new CondenserTieredBlock(5));
+        if (Config.tier6Enabled) event.getRegistry().register(new CondenserTieredBlock(6));
+        if (Config.tier7Enabled) event.getRegistry().register(new CondenserTieredBlock(7));
+        if (Config.tier8Enabled) event.getRegistry().register(new CondenserTieredBlock(8));
         GameRegistry.registerTileEntity(CondenserTieredTileEntity.class, ProgressiveAlchemy.MODID + "_condensertiered");
     }
 

@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "progressivealchemy",
+  "name": "Progressive Alchemy",
+  "description": "ProjectE Addon that allows you to customize progression.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["zerofall"],
+  "credits": "zerofall",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

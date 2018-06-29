@@ -30,11 +30,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class CondenserTieredBlock extends Condenser implements IProbeInfoAccessor {
 	
-	private final int emcLimit;
+	private final int tier;
 
-	public CondenserTieredBlock(int tier, int emcLimit) 
+	public CondenserTieredBlock(int tier) 
 	{
-		this.emcLimit = emcLimit;
+		this.tier = tier;
 		this.setUnlocalizedName("condensertiered_"+tier);
 		this.setRegistryName("condensertiered_"+tier);
 	}
@@ -43,7 +43,7 @@ public class CondenserTieredBlock extends Condenser implements IProbeInfoAccesso
 	@Override
 	public TileEntity createTileEntity(@Nonnull World world, @Nonnull IBlockState state)
 	{
-		return new CondenserTieredTileEntity(emcLimit);
+		return new CondenserTieredTileEntity(tier);
 	}
 	
 	@Override
@@ -69,7 +69,7 @@ public class CondenserTieredBlock extends Condenser implements IProbeInfoAccesso
 	
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-        tooltip.add(TextFormatting.DARK_AQUA + "EMC Limit: " + Constants.EMC_FORMATTER.format(emcLimit));
+        tooltip.add(TextFormatting.DARK_AQUA + "EMC Limit: " + Constants.EMC_FORMATTER.format(CondenserTieredTileEntity.getEmcLimit(tier)));
 	}
 	
 	@SideOnly(Side.CLIENT)
