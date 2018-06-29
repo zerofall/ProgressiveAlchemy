@@ -1,6 +1,6 @@
 {
   "result": {
-    "item": "progressivealchemy:condensertiered_1"
+    "item": "progressivealchemy:condensertiered_7"
   },
   "type": "forge:ore_shaped",
   "pattern": [
@@ -14,13 +14,14 @@
       "data": 0
     },
     "S": {
-      "item": "#STONE"
+      "item": "minecraft:stone",
+      "data": 0
     },
     "I": {
-      "item": "#INGOTIRON"
+      "item": "minecraft:iron_ingot"
     },
     "C": {
-      "item": "#CHESTWOOD"
+      "item": "minecraft:chest"
     },
     "D": {
       "item": "minecraft:chorus_fruit"
