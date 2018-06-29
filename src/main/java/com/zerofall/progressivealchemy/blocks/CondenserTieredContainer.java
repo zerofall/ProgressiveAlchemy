@@ -26,7 +26,7 @@ public class CondenserTieredContainer extends CondenserContainer {
 		//Condenser Inventory
 		for (int i = 0; i < 7; i++)
 			for (int j = 0; j < 13; j++)
-				this.addSlotToContainer(new ValidatedSlot(handler, counter++, 12 + j * 18, 26 + i * 18, s -> SlotPredicates.HAS_EMC.test(s) && !tile.isStackEqualToLock(s)));
+				this.addSlotToContainer(new ValidatedSlot(handler, counter++, 12 + j * 18, 26 + i * 18, s -> SlotPredicates.HAS_EMC.test(s) && EMCHelper.getEmcValue(s) <= ((CondenserTieredTileEntity)tile).getEmcLimit() && !tile.isStackEqualToLock(s)));
 
 		//Player Inventory
 		for(int i = 0; i < 3; i++)
