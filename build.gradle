@@ -24,7 +24,7 @@ repositories {
     }
 }
 
-version = "1.0"
+version = "1.12.2-1.0.0"
 group = "com.zerofall.progressivealchemy"
 archivesBaseName = "progressivealchemy"
 
