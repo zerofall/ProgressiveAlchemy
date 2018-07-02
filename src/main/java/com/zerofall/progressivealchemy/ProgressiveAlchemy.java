@@ -10,12 +10,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = ProgressiveAlchemy.MODID, name = ProgressiveAlchemy.MODNAME, version = ProgressiveAlchemy.MODVERSION, dependencies = "required-after:projecte", useMetadata = true)
+@Mod(modid = ProgressiveAlchemy.MODID, name = ProgressiveAlchemy.MODNAME, version = ProgressiveAlchemy.MODVERSION, dependencies = "required-after:projecte@[1.12-PE1.3.0,);", useMetadata = true)
 public class ProgressiveAlchemy {
 
     public static final String MODID = "progressivealchemy";
     public static final String MODNAME = "ProgressiveAlchemy";
-    public static final String MODVERSION = "0.0.1";
+    public static final String MODVERSION = "1.0";
 
     @SidedProxy(clientSide = "com.zerofall.progressivealchemy.proxy.ClientProxy", serverSide = "com.zerofall.progressivealchemy.proxy.ServerProxy")
     public static CommonProxy proxy;
