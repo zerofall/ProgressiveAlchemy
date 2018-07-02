@@ -27,7 +27,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.common.Optional;
 
+
+@Optional.Interface(iface = "mcjty.theoneprobe.api.IProbeInfoAccessor", modid = "theoneprobe") 
 public class CondenserTieredBlock extends Condenser implements IProbeInfoAccessor {
 	
 	private final int tier;
@@ -57,6 +60,7 @@ public class CondenserTieredBlock extends Condenser implements IProbeInfoAccesso
 		return true;
 	}
 	
+	@Optional.Method(modid="theoneprobe")
 	@Override
 	public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world,
 			IBlockState blockState, IProbeHitData data) {
