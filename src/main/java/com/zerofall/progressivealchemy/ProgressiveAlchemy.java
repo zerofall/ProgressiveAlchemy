@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = ProgressiveAlchemy.MODID, name = ProgressiveAlchemy.MODNAME, version = ProgressiveAlchemy.MODVERSION, dependencies = "required-after:projecte", useMetadata = true)
+@Mod(modid = ProgressiveAlchemy.MODID, name = ProgressiveAlchemy.MODNAME, version = ProgressiveAlchemy.MODVERSION, dependencies = "required-after:projecte;after:theoneprobe", useMetadata = true)
 public class ProgressiveAlchemy {
 
     public static final String MODID = "progressivealchemy";
