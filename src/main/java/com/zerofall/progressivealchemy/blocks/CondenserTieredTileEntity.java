@@ -18,16 +18,16 @@ public class CondenserTieredTileEntity extends CondenserTile
 	
 	public CondenserTieredTileEntity() {}
 	
-	public CondenserTieredTileEntity(int emcLimit) {
-		this.tier = emcLimit;
+	public CondenserTieredTileEntity(int tier) {
+		this.tier = tier;
 	}
 	
 	public int getTier() {
 		return this.tier;
 	}
 	
-	public int getEmcLimit() {
-		return CondenserTieredTileEntity.getEmcLimit(this.tier);
+	public long getEmcLimit() {
+		return (long)CondenserTieredTileEntity.getEmcLimit(this.tier);
 	}
 	
 	public static int getEmcLimit(int tier) {

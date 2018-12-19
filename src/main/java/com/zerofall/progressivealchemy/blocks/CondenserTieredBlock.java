@@ -38,7 +38,7 @@ public class CondenserTieredBlock extends Condenser implements IProbeInfoAccesso
 	public CondenserTieredBlock(int tier) 
 	{
 		this.tier = tier;
-		this.setUnlocalizedName("condensertiered_"+tier);
+		this.setTranslationKey("condensertiered_"+tier);
 		this.setRegistryName("condensertiered_"+tier);
 	}
 	
